@@ -1,0 +1,39 @@
+{
+  "name": "gridmaterial-ui",
+  "version": "1.0.0",
+  "description": "Material-inspired responsive CSS and JavaScript UI framework with interactive components",
+  "license": "MIT",
+  "scripts": {
+    "start": "node scripts/server.js",
+    "dev": "node scripts/server.js",
+    "check": "node --check js/gridmaterial.js && node --check js/docs.js && node --check js/docs-data.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "js/gridmaterial.js",
+  "style": "css/gridmaterial.css",
+  "files": [
+    "css/gridmaterial.css",
+    "js/gridmaterial.js",
+    "LICENSE",
+    "README.md"
+  ],
+  "homepage": "https://dongannhien99-lgtm.github.io/grid-material/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dongannhien99-lgtm/grid-material.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dongannhien99-lgtm/grid-material/issues"
+  },
+  "keywords": [
+    "material-design",
+    "css",
+    "ui",
+    "components",
+    "vanilla-javascript",
+    "responsive",
+    "framework"
+  ]
+}
