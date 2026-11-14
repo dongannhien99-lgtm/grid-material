@@ -20,7 +20,7 @@ add('start','introduction','Einführung','Ein eigenständiges, produktiv einsetz
   <div class="gm-col-12 gm-col-md-6">
     <div class="gm-card gm-card-elevated">
       <div class="gm-card-body">
-        <span class="gm-badge">GridMaterial 1.0</span>
+        <span class="gm-badge">GridMaterial 1.1</span>
         <h3 style="margin-top:14px">Gestalte mit System.</h3>
         <p class="gm-text-muted">Ein konsistentes UI – ganz ohne Abhängigkeiten.</p>
         <button class="gm-btn gm-btn-primary" onclick="GridMaterial.toast('Bereit für dein Projekt!')">Loslegen →</button>
@@ -36,19 +36,20 @@ add('start','introduction','Einführung','Ein eigenständiges, produktiv einsetz
   </div>
 </div>
 `,'Die Bibliothek wird lokal durch eine CSS-Datei und eine JavaScript-Datei eingebunden. Beide sind unabhängig von Bootstrap, jQuery oder einem Build-Tool.');
-add('start','installation','Installation','Installiere GridMaterial über npm, per jsDelivr CDN oder mit lokalen Dateien.',`
-<div class="gm-alert gm-alert-info"><span>ⓘ</span><div><strong>GridMaterial installieren</strong><div>Du hast drei Möglichkeiten: npm, CDN oder lokales Einbinden. Die npm- und CDN-Adressen sind nach der Veröffentlichung des npm-Pakets beziehungsweise Git-Tags nutzbar.</div></div></div>
-<div class="gm-card gm-card-outlined" style="margin-top:18px"><div class="gm-card-body"><h3>1. Über npm</h3><pre><code>npm install gridmaterial-ui</code></pre><p class="gm-text-muted">CSS/JS-Dateien befinden sich anschließend im Ordner node_modules/gridmaterial-ui/. Nutze für Browserprojekte einen Bundler oder kopiere die beiden Dateien in deine öffentlichen Assets.</p></div></div>
-<div class="gm-card gm-card-outlined" style="margin-top:12px"><div class="gm-card-body"><h3>2. Über CDN (jsDelivr)</h3><pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridmaterial-ui@1.0.0/css/gridmaterial.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/gridmaterial-ui@1.0.0/js/gridmaterial.js" defer&gt;&lt;/script&gt;</code></pre><p class="gm-text-muted">Die npm-CDN-Adressen funktionieren für die gridmaterial-ui Intallation per Node.js</p></div></div>
-<div class="gm-card gm-card-outlined" style="margin-top:12px"><div class="gm-card-body"><h3>3. Über GitHub CDN</h3><pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dongannhien99-lgtm/grid-material@v1.0.0/css/gridmaterial.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/gh/dongannhien99-lgtm/grid-material@v1.0.0/js/gridmaterial.js" defer&gt;&lt;/script&gt;</code></pre><p class="gm-text-muted">Mit dieser Variante wird es als Link eingebunden, und verstoßt daher gegen die DSVGO-Regeln. Für Test -und Entwicklungszwecke können SIe es problemlos nutzen, soweit Sie Ihre Applikation nicht veröffentlichen.</p></div></div>
-<p style="margin-top:18px"><a href="https://github.com/dongannhien99-lgtm/grid-material" target="_blank" rel="noopener noreferrer">GitHub-Quellcode ansehen</a> · <a href="https://www.npmjs.com/package/gridmaterial-ui" target="_blank" rel="noopener noreferrer">npm-Paket öffnen</a></p>
-`,'Bei npm install gridmaterial-ui landen die Dateien in node_modules/gridmaterial-ui/. In einfachem HTML müssen sie über einen öffentlich erreichbaren Pfad eingebunden werden. GitHub: https://github.com/dongannhien99-lgtm/grid-material. Die npm-Version 1.0.0 erfordert Veröffentlichung.',`npm install gridmaterial-ui
+add('start','installation','Installation','Nutze GridMaterial mit npm, CDN oder lokalen Projektdateien.',`
+<div class="gm-card gm-card-outlined"><div class="gm-card-body"><h3>Installation mit npm</h3><pre><code>npm install gridmaterial-ui</code></pre><p>Das Paket enthält die komplette CSS-Bibliothek, ihre 20 Einzelmodule und das Framework-JavaScript.</p><pre><code>import 'gridmaterial-ui/css/gridmaterial.css';
+import 'gridmaterial-ui/js/gridmaterial.js';</code></pre><p class="gm-text-muted">Für Projekte mit Vite, Webpack oder einem anderen CSS-fähigen Bundler.</p></div></div>
+<div class="gm-card gm-card-outlined gm-mt-3"><div class="gm-card-body"><h3>CDN – jsDelivr</h3><pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridmaterial-ui@1.1.0/css/gridmaterial.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/gridmaterial-ui@1.1.0/js/gridmaterial.js" defer&gt;&lt;/script&gt;</code></pre><p>Für einfache HTML-Seiten ohne Build-Werkzeuge.</p></div></div>
+<div class="gm-card gm-card-outlined gm-mt-3"><div class="gm-card-body"><h3>Einzelne CSS-Module</h3><pre><code>import 'gridmaterial-ui/css/modules/tokens.css';
+import 'gridmaterial-ui/css/modules/buttons.css';
+import 'gridmaterial-ui/css/modules/forms.css';
+import 'gridmaterial-ui/css/modules/variants.css';</code></pre><p>Module können gezielt eingebunden werden; <code>tokens.css</code> gehört an den Anfang. Die vollständige Datei enthält bereits sämtliche Module.</p></div></div>
+<div class="gm-card gm-card-outlined gm-mt-3"><div class="gm-card-body"><h3>Projekt und Dokumentation</h3><p><a href="https://github.com/dongannhien99-lgtm/grid-material" target="_blank" rel="noopener noreferrer">Quellcode auf GitHub</a> · <a href="https://www.npmjs.com/package/gridmaterial-ui" target="_blank" rel="noopener noreferrer">Paket auf npm</a> · <a href="https://dongannhien99-lgtm.github.io/grid-material/" target="_blank" rel="noopener noreferrer">Online-Dokumentation</a></p></div></div>
+`,'Die gebündelte CSS-Datei enthält alle Komponenten. Einzelne Stylesheets sind unter css/modules/ organisiert.',`npm install gridmaterial-ui
 
-<!-- Direkt im Browser nach npm-Veröffentlichung -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gridmaterial-ui@1.0.0/css/gridmaterial.css">
-<script src="https://cdn.jsdelivr.net/npm/gridmaterial-ui@1.0.0/js/gridmaterial.js" defer></script>`);
+import 'gridmaterial-ui/css/gridmaterial.css';
+import 'gridmaterial-ui/js/gridmaterial.js';`);
 add('start','customization','Design Tokens','Alle Farben, Rundungen, Abstände und Schatten lassen sich über CSS Custom Properties anpassen.',`
 <div class="gm-hstack gm-gap-2 gm-flex-wrap"><button class="gm-btn gm-btn-primary">Primary</button><button class="gm-btn gm-btn-tonal">Tonal</button><button class="gm-btn gm-btn-outlined">Outlined</button><span class="gm-badge">Badge</span></div>
 <div class="gm-card gm-card-filled" style="margin-top:16px"><div class="gm-card-body">Die Palette passt sich automatisch dem Light-/Dark-Theme an.</div></div>

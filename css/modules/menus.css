@@ -1,0 +1,4 @@
+/* GridMaterial 1.1 | menus */
+/* --- Dropdown / menu --- */
+.gm-dropdown{position:relative;display:inline-flex}.gm-menu{position:absolute;top:calc(100% + 7px);left:0;z-index:var(--gm-z-dropdown);min-width:205px;max-width:min(360px,95vw);padding:6px;background:var(--gm-surface-raised);border:1px solid var(--gm-border);border-radius:var(--gm-radius-md);box-shadow:var(--gm-shadow-md)}.gm-menu[hidden]{display:none}.gm-menu-end{right:0;left:auto}.gm-menu-item{appearance:none;display:flex;align-items:center;gap:11px;width:100%;padding:10px 13px;background:transparent;border:0;border-radius:8px;color:var(--gm-text);text-align:left;font-size:.88rem}.gm-menu-item:hover,.gm-menu-item:focus-visible{background:var(--gm-surface-high);text-decoration:none}.gm-menu-divider{height:1px;background:var(--gm-border);margin:6px 0}.gm-menu-label{padding:8px 12px;color:var(--gm-muted);font-size:.76rem;font-weight:720}
+

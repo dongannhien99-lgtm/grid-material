@@ -1,12 +1,14 @@
 {
   "name": "gridmaterial-ui",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Material-inspired responsive CSS and JavaScript UI framework with interactive components",
   "license": "MIT",
   "scripts": {
     "start": "node scripts/server.js",
     "dev": "node scripts/server.js",
-    "check": "node --check js/gridmaterial.js && node --check js/docs.js && node --check js/docs-data.js"
+    "check": "node --check js/gridmaterial.js && node --check js/docs.js && node --check js/docs-data.js && node --check js/docs-variants.js && node --check scripts/build-css.js",
+    "build:css": "node scripts/build-css.js",
+    "prepack": "npm run build:css && npm run check"
   },
   "engines": {
     "node": ">=18"
@@ -14,8 +16,12 @@
   "main": "js/gridmaterial.js",
   "style": "css/gridmaterial.css",
   "files": [
-    "css/gridmaterial.css",
-    "js/gridmaterial.js",
+    "css/",
+    "js/",
+    "assets/",
+    "examples/",
+    "scripts/",
+    "index.html",
     "LICENSE",
     "README.md"
   ],
@@ -36,7 +42,14 @@
     "responsive",
     "framework"
   ],
-  "dependencies": {
-    "gridmaterial-ui": "^0.0.0-stage"
+  "exports": {
+    ".": {
+      "require": "./js/gridmaterial.js",
+      "default": "./js/gridmaterial.js"
+    },
+    "./css/gridmaterial.css": "./css/gridmaterial.css",
+    "./css/*": "./css/*",
+    "./js/*": "./js/*",
+    "./assets/*": "./assets/*"
   }
 }

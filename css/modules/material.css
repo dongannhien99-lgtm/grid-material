@@ -1,0 +1,5 @@
+/* GridMaterial 1.1 | material */
+/* --- Floating action button, segmented, state controls --- */
+.gm-fab{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:58px;height:58px;border:0;border-radius:18px;background:var(--gm-primary-container);color:var(--gm-on-primary-container);box-shadow:var(--gm-shadow-md);font-weight:700}.gm-fab:hover{box-shadow:var(--gm-shadow-lg)}.gm-fab-extended{width:auto;padding:0 21px}.gm-fab-small{width:42px;height:42px;border-radius:14px}
+.gm-segmented{display:inline-flex;border:1px solid var(--gm-border-strong);border-radius:50px;overflow:hidden}.gm-segmented button{padding:9px 16px;background:var(--gm-surface);color:var(--gm-muted);border:0;border-right:1px solid var(--gm-border-strong);font-size:.86rem}.gm-segmented button:last-child{border-right:0}.gm-segmented button[aria-pressed="true"]{background:var(--gm-primary-container);color:var(--gm-on-primary-container);font-weight:700}
+

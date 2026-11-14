@@ -1,0 +1,11 @@
+/* GridMaterial 1.1 | responsive */
+/* Breakpoints. More column and utility rules are appended below. */
+@media(min-width:576px){.gm-container,.gm-container-sm{max-width:540px}}
+@media(min-width:768px){.gm-container,.gm-container-sm,.gm-container-md{max-width:720px}}
+@media(min-width:992px){.gm-container,.gm-container-sm,.gm-container-md,.gm-container-lg{max-width:960px}}
+@media(min-width:1200px){.gm-container,.gm-container-sm,.gm-container-md,.gm-container-lg,.gm-container-xl{max-width:1140px}}
+@media(min-width:1400px){.gm-container,.gm-container-sm,.gm-container-md,.gm-container-lg,.gm-container-xl,.gm-container-xxl{max-width:1320px}}
+@media(max-width:767px){.gm-navbar{flex-wrap:wrap}.gm-navbar-toggle{display:inline-flex}.gm-navbar-collapse{display:none;flex-basis:100%;flex-direction:column;align-items:stretch}.gm-navbar-collapse.gm-open{display:flex}.gm-navbar-nav{flex-direction:column;align-items:stretch}.gm-form-row{grid-template-columns:1fr}.gm-toast-stack{right:16px;bottom:16px}.gm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gm-grid>*{grid-column:span 2}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+

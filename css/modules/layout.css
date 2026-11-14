@@ -1,0 +1,12 @@
+/* GridMaterial 1.1 | layout */
+/* --- Layout: containers, flex grid, native CSS grid, spacing gutters --- */
+.gm-container,.gm-container-fluid,.gm-container-sm,.gm-container-md,.gm-container-lg,.gm-container-xl,.gm-container-xxl{width:100%;padding-inline:16px;margin-inline:auto}
+.gm-container-fluid{max-width:none!important}
+.gm-row{display:flex;flex-wrap:wrap;margin-inline:calc(var(--gm-gutter-x,24px)/-2);margin-block:calc(var(--gm-gutter-y,0px)/-2)}
+.gm-row>*{min-width:0;flex-shrink:0;width:100%;max-width:100%;padding-inline:calc(var(--gm-gutter-x,24px)/2);padding-block:calc(var(--gm-gutter-y,0px)/2)}
+.gm-col{flex:1 0 0!important;width:auto!important}
+.gm-row-cols-1>*{width:100%}.gm-row-cols-2>*{width:50%}.gm-row-cols-3>*{width:33.333333%}.gm-row-cols-4>*{width:25%}
+.gm-grid{display:grid;grid-template-columns:repeat(var(--gm-grid-cols,12),minmax(0,1fr));gap:var(--gm-grid-gap,16px)}
+.gm-grid-span-2{grid-column:span 2}.gm-grid-span-3{grid-column:span 3}.gm-grid-span-4{grid-column:span 4}.gm-grid-span-6{grid-column:span 6}.gm-grid-span-12{grid-column:span 12}
+.gm-g-0{--gm-gutter-x:0px;--gm-gutter-y:0px}.gm-g-1{--gm-gutter-x:8px;--gm-gutter-y:8px}.gm-g-2{--gm-gutter-x:16px;--gm-gutter-y:16px}.gm-g-3{--gm-gutter-x:24px;--gm-gutter-y:24px}.gm-g-4{--gm-gutter-x:32px;--gm-gutter-y:32px}.gm-gx-2{--gm-gutter-x:16px}.gm-gy-3{--gm-gutter-y:24px}
+

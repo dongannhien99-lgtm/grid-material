@@ -40,7 +40,7 @@
  }
  function homeHero(){
   return `<div class="docs-home-hero">
-    <span class="docs-hero-label">✦ &nbsp; Eigenständiges UI Framework · v1.0.0</span>
+    <span class="docs-hero-label">✦ &nbsp; Eigenständiges UI Framework · v1.1.0</span>
     <h2>Alles, was dein Interface braucht.</h2>
     <p>Eine vollständige, moderne Komponentenbibliothek mit eigenem Material-inspiriertem Design. Entwickelt für echte Anwendungen – ganz ohne Bootstrap oder jQuery.</p>
     <div class="docs-hero-buttons"><a class="gm-btn gm-btn-primary" href="#/start/installation">Jetzt starten &nbsp; ↗</a><a class="gm-btn gm-btn-outlined" href="#/components/accordion">Komponenten entdecken</a></div>
@@ -97,13 +97,15 @@
    <div class="docs-eyebrow"><span class="docs-eyebrow-line"></span>${esc(group.title)} <span style="color:var(--gm-outline)">/</span> ${esc(item.title)}</div>
    <h1 class="docs-title">${esc(item.title)}</h1>
    <p class="docs-desc">${esc(item.description)}</p>
-   <div class="docs-feature-pills"><span>GridMaterial v1.0</span><span>CSS + Vanilla JS</span><span>Responsive</span><span>Dark Mode</span></div>
+   <div class="docs-feature-pills"><span>GridMaterial v1.1</span><span>CSS + Vanilla JS</span><span>Responsive</span><span>Dark Mode</span></div>
    <div class="docs-hairline"></div>
    <section id="docs-example" aria-labelledby="docs-preview-heading"><h2 class="docs-section-title" id="docs-preview-heading">Beispiel</h2><p class="docs-section-desc">Interaktive Vorschau der echten Framework-Komponente.</p><div class="docs-preview"><div class="docs-example-label">LIVE PREVIEW</div>${item.html}</div>
     <div class="docs-code-frame" id="docs-markup"><div class="docs-code-top"><div class="docs-code-meta"><span class="docs-code-dot"></span> HTML &nbsp;·&nbsp; kopierfertig</div><button class="docs-copy" type="button" data-copy="markup" aria-label="HTML-Code kopieren">${copyIcon()} Code kopieren</button></div><pre class="docs-code-pre"><code>${prettyCode(formatHTML(item.html))}</code></pre></div></section>
+
+   ${item.variants?.length?`<section id="docs-variants" class="gm-mt-5"><h2 class="docs-section-title">10 Varianten: ${esc(item.title)}</h2><p class="docs-section-desc">Zehn nutzbare Varianten mit eigener Vorschau und individuell kopierbarem HTML.</p><div class="docs-variant-list">${item.variants.map((variant,index)=>`<article class="docs-variant-card"><div class="docs-variant-header"><b>${String(index+1).padStart(2,'0')} · ${esc(variant.name)}</b><button class="docs-copy" type="button" data-copy-variant="${index}">${copyIcon()} Code kopieren</button></div><div class="docs-variant-preview">${variant.html}</div><details class="docs-variant-source"><summary>HTML anzeigen</summary><pre class="docs-code-pre"><code>${prettyCode(formatHTML(variant.html))}</code></pre></details></article>`).join('')}</div></section>`:''}
    ${item.usage?`<section id="docs-usage" class="gm-mt-5"><h2 class="docs-section-title">Verwendung</h2><p class="docs-section-desc">${esc(item.usage)}</p></section>`:''}
    ${isCode?`<section id="docs-api" class="gm-mt-4"><h2 class="docs-section-title">${item.group==='start'?'Konfiguration / API':'Codebeispiel'}</h2><div class="docs-code-frame" style="border-radius:14px"><div class="docs-code-top"><span class="docs-code-meta">CSS / JavaScript</span><button class="docs-copy" type="button" data-copy="api">${copyIcon()} Code kopieren</button></div><pre class="docs-code-pre"><code>${esc(item.api)}</code></pre></div></section>`:''}
-   <section id="docs-source" class="gm-mt-5"><h2 class="docs-section-title">Quellcode & API</h2><p class="docs-section-desc">Alle oben verwendeten Komponentenstile sind in <strong>gridmaterial.css</strong> enthalten. Interaktionen liegen in <strong>gridmaterial.js</strong>. Beide Dateien können direkt geöffnet und kopiert werden.</p><div class="docs-source-links"><a href="css/gridmaterial.css" target="_blank" rel="noopener">${codeIcon()} Vollständiges CSS ansehen</a><a href="js/gridmaterial.js" target="_blank" rel="noopener">${codeIcon()} JavaScript ansehen</a><a href="examples/starter.html" target="_blank" rel="noopener">${codeIcon()} Starter-Projekt öffnen</a></div></section>
+   <section id="docs-source" class="gm-mt-5"><h2 class="docs-section-title">Quellcode & API</h2><p class="docs-section-desc">Die gebündelten Komponentenstile sind in <strong>gridmaterial.css</strong> enthalten; editierbare Einzelmodule liegen in <strong>css/modules/</strong>. Interaktionen liegen in <strong>gridmaterial.js</strong>. Beide Dateien können direkt geöffnet und kopiert werden.</p><div class="docs-source-links"><a href="css/gridmaterial.css" target="_blank" rel="noopener">${codeIcon()} Vollständiges CSS ansehen</a><a href="css/modules/variants.css" target="_blank" rel="noopener">${codeIcon()} Komponenten-Varianten CSS</a><a href="js/gridmaterial.js" target="_blank" rel="noopener">${codeIcon()} JavaScript ansehen</a><a href="examples/starter.html" target="_blank" rel="noopener">${codeIcon()} Starter-Projekt öffnen</a></div></section>
    ${item.group==='start'&&item.id==='accessibility'?'<div class="docs-note"><b>Hinweis zur Produktivnutzung</b>Teste Komponenten mit verschiedenen Screenreadern und assistiven Technologien. Dieses Framework ist eigenständig; eine formale WCAG-Zertifizierung ist damit nicht verbunden.</div>':''}
    <div class="docs-next-prev">${prev?`<a href="${link(prev)}"><small>← Vorherige Seite</small><strong>${esc(prev.title)}</strong></a>`:'<div></div>'}${next?`<a href="${link(next)}"><small>Nächste Seite →</small><strong>${esc(next.title)}</strong></a>`:'<div></div>'}</div>
    <footer class="docs-footer"><span>© 2026 GridMaterial UI · MIT License</span><span>Made for interfaces that matter.</span></footer>`;
@@ -111,7 +113,7 @@
  function copyIcon(){return '<svg viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>'}
  function codeIcon(){return '<svg viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 4l-4 16"/></svg>'}
  function buildToc(item){
-  const entries=[['docs-example','Beispiel'],['docs-markup','HTML-Code'],...(item.usage?[['docs-usage','Verwendung']]:[]),...(item.api?[['docs-api','API / Konfiguration']]:[]),['docs-source','Quellcode']];
+  const entries=[['docs-example','Beispiel'],['docs-markup','HTML-Code'],...(item.variants?.length?[['docs-variants','10 Varianten']]:[]),...(item.usage?[['docs-usage','Verwendung']]:[]),...(item.api?[['docs-api','API / Konfiguration']]:[]),['docs-source','Quellcode']];
   $('#docs-toc').innerHTML=entries.map(([id,name],ix)=>`<button class="docs-toc-link${!ix?' is-active':''}" data-scroll-to="${id}">${esc(name)}</button>`).join('');
  }
  function route(){
@@ -165,6 +167,8 @@
   }
   const copied=event.target.closest('[data-copy]');
   if(copied&&state.current)copy(copied.dataset.copy==='api'?state.current.api:formatHTML(state.current.html),copied);
+  const variantCopy=event.target.closest('[data-copy-variant]');
+  if(variantCopy&&state.current?.variants){const sample=state.current.variants[Number(variantCopy.dataset.copyVariant)];if(sample)copy(formatHTML(sample.html),variantCopy)}
   const scroll=event.target.closest('[data-scroll-to]');
   if(scroll){const el=document.getElementById(scroll.dataset.scrollTo);el?.scrollIntoView({behavior:'smooth',block:'start'});$$('.docs-toc-link').forEach(x=>x.classList.toggle('is-active',x===scroll))}
   if(event.target.closest('#open-search'))openPalette();

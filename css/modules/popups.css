@@ -1,0 +1,5 @@
+/* GridMaterial 1.1 | popups */
+/* --- Tooltips / popovers / Toast --- */
+.gm-tooltip,.gm-popover{position:fixed;z-index:var(--gm-z-tooltip);max-width:270px;padding:7px 11px;border-radius:8px;background:#322c41;color:#fff;font-size:.76rem;line-height:1.4;box-shadow:var(--gm-shadow-md);pointer-events:none}.gm-popover{z-index:var(--gm-z-popover);pointer-events:auto;padding:17px;max-width:300px;background:var(--gm-surface-raised);color:var(--gm-text);font-size:.86rem;border:1px solid var(--gm-border);border-radius:var(--gm-radius-md)}.gm-popover-title{font-weight:720;margin-bottom:7px}
+.gm-toast-stack{position:fixed;z-index:var(--gm-z-toast);right:22px;bottom:22px;display:grid;gap:10px;width:min(370px,calc(100vw - 32px));pointer-events:none}.gm-toast{pointer-events:auto;display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:var(--gm-radius-md);background:var(--gm-text);color:var(--gm-background);box-shadow:var(--gm-shadow-lg);font-size:.89rem;animation:gm-toast-in .25s var(--gm-ease)}.gm-toast .gm-close{margin-left:auto;color:inherit}.gm-toast-success{border-left:4px solid #64d8a2}.gm-toast-danger{border-left:4px solid #ff818e}
+
