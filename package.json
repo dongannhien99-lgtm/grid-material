@@ -35,5 +35,8 @@
     "vanilla-javascript",
     "responsive",
     "framework"
-  ]
+  ],
+  "dependencies": {
+    "gridmaterial-ui": "^0.0.0-stage"
+  }
 }
